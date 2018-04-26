@@ -89,4 +89,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             progressDialog.dismiss();
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mainPresenter.onDestroy();
+    }
 }
